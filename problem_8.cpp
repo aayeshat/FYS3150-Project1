@@ -25,7 +25,7 @@ double calc_d2u_approx(double x, double h)
 
 int main()
 {
-    std::string filename = "problem_8_output.txt";
+    std::string filename = "problem_8clear_output.txt";
     std::ofstream ofile;
     ofile.open(filename);
 
@@ -45,10 +45,10 @@ int main()
               << std::setw(width) << "d2u_exact"
               << std::endl;
 
-    double h = hmin;
-    while (h <= hmax)
-    {
-
+  
+   for (double h = hmin; h <= hmax; h = h * 10.)
+   {
+   
         double d2u_approx = calc_d2u_approx(x, h);
 
         std::cout << std::setw(width) << std::setprecision(prec) << std::scientific << h
@@ -61,8 +61,6 @@ int main()
               << std::setw(width) << std::setprecision(prec) << std::scientific << d2u_exact
               << std::endl;
 
-        // Increase stepsize
-        h = h * 10.;
     }
 
     ofile.close();
