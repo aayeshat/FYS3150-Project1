@@ -17,6 +17,6 @@ plt.ylabel("u(x)")
 plt.xlabel("x")
 # plt.xscale("x")
 # plt.yscale("u(x)")
-plt.savefig("plot problem 2.pdf")
+plt.savefig("plot_problem_2.pdf")
 
 plt.show()

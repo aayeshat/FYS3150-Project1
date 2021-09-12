@@ -27,20 +27,17 @@ int main()
     arma::vec x = arma::linspace(h, 1 - h, n);
 
     // filename
-    std::string filename = "problem-7.txt";
+    std::string filename = "problem_7a_output.txt";
 
     std::ofstream ofile;
     ofile.open(filename);
-
-    // Send some text to this output file
-    ofile << "Some output text" << std::endl;
 
     int width = 12;
     int prec = 4;
 
     for (int i = 0; i < n; i++)
     {
-        double f = 100 * exp(-10 * x[i]); // f(x) = 100*e^(-10x)
+        double f = 100 * exp(-10 * x[i]); // f(x) = 100*exp(-10x)
         g[i] = pow(h, 2) * f;             //h^2f(x)
     }
 

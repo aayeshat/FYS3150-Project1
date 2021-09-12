@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 
-    std::string filename = "x_y.txt";
+    std::string filename = "problem_2_output.txt";
 
     std::ofstream ofile;
     ofile.open(filename);
